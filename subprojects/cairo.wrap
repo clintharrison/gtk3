@@ -2,4 +2,4 @@
 directory=cairo
 url=https://github.com/centricular/cairo.git
 push-url=git@github.com:centricular/cairo.git
-revision=meson
+revision = 1300747d296af098be09a1310854b0e7f3c8834e

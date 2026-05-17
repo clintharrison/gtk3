@@ -2,4 +2,4 @@
 directory=pixman
 url=https://github.com/centricular/pixman.git
 push-url=git@github.com:centricular/pixman.git
-revision=meson
+revision = 51b945b10b198a09efebed0d62a24ea00ab9510a

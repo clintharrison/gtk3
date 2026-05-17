@@ -2,4 +2,4 @@
 directory=fontconfig
 url=https://github.com/centricular/fontconfig.git
 push-url=git@github.com:centricular/fontconfig.git
-revision=meson
+revision = 4d1f5233c6fc37fa1302f01c937a7d2580ad160e

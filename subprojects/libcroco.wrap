@@ -2,4 +2,4 @@
 directory=libcroco
 url=https://gitlab.gnome.org/GNOME/libcroco.git
 push-url=git@gitlab.gnome.org:GNOME/libcroco.git
-revision=wip/meson
+revision = 140ccf390dd1e7493a25ea3018ae79fb89f68118

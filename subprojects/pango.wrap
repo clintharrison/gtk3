@@ -2,4 +2,4 @@
 directory=pango
 url=https://gitlab.gnome.org/GNOME/pango.git
 push-url=git@gitlab.gnome.org:GNOME/pango.git
-revision=main
+revision = 81750aec33a432f14815e60904ea3ad53220591c

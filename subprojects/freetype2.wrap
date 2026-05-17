@@ -2,4 +2,4 @@
 directory=freetype2
 url=https://github.com/centricular/freetype2.git
 push-url=git@github.com:centricular/freetype2.git
-revision=meson
+revision = e9931d4e5498653f9f2d567aa179f7a17f039982

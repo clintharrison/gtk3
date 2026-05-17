@@ -2,4 +2,4 @@
 directory=libepoxy
 url=https://github.com/anholt/libepoxy.git
 push-url=git@github.com:anholt/libepoxy.git
-revision=master
+revision = d1f952c4565c389d82fd1657153e84e050f35b27

@@ -2,4 +2,4 @@
 directory=harfbuzz
 url=https://github.com/centricular/harfbuzz.git
 push-url=git@github.com:centricular/harfbuzz.git
-revision=meson
+revision = eea385e67ed54520c2085113f96f0f87b421f400
