@@ -372,7 +372,7 @@ gmodule_dep    = dependency('gmodule-2.0', version: glib_req,
 
 # Update when we can find depedencies in a declarative manner
 cairo_dep      = dependency('cairo', version: cairo_req, required: cc.get_id() != 'msvc')
-cairogobj_dep  = dependency('cairo-gobject', version: cairo_req, required: cc.get_id() != 'msvc')
+cairogobj_dep  = dependency('cairo-gobject', version: cairo_req, required: false)
 
 # Remove when we can find depedencies in a declarative manner
 if not cairo_dep.found() and cc.get_id() == 'msvc'
@@ -387,14 +387,14 @@ if not cairo_dep.found()
 endif
 
 # Remove when we can find depedencies in a declarative manner
-if not cairogobj_dep.found() and cc.get_id() == 'msvc'
+if not cairogobj_dep.found()
   if cc.has_header('cairo-gobject.h')
     cairogobj_dep = cc.find_library('cairo-gobject', required: false)
   endif
 endif
 
 if not cairogobj_dep.found()
-  cairogobj_dep  = dependency('cairo-gobject', version: cairo_req,
+  cairogobj_dep  = dependency('cairo-gobject', version: cairo_req, required: false,
                               fallback : ['cairo', 'libcairogobject_dep'])
 endif
 
