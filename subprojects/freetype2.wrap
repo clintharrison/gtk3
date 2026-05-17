@@ -1,5 +1,7 @@
 [wrap-git]
-directory=freetype2
-url=https://github.com/centricular/freetype2.git
-push-url=git@github.com:centricular/freetype2.git
-revision = e9931d4e5498653f9f2d567aa179f7a17f039982
+directory = freetype
+url = https://gitlab.freedesktop.org/freetype/freetype.git
+revision = VER-2-14-1
+
+[provide]
+dependency_names = freetype2
