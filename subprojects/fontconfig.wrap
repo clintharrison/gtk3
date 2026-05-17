@@ -3,7 +3,6 @@ directory = fontconfig
 url = https://gitlab.freedesktop.org/fontconfig/fontconfig
 depth = 1
 revision = 2.17.1
-diff_files = fontconfig-0001.patch
 
 [provide]
 fontconfig = fontconfig_dep
