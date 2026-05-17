@@ -1,0 +1,8 @@
+### Build dirs ###
+/builddir_kindlehf/
+/builddir/
+
+### Subprojects ###
+/subprojects/*
+!/subprojects/packagefiles/
+!/subprojects/*.wrap
