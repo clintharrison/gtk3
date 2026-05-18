@@ -49,7 +49,3 @@ RUN sudo -u vscode pipx install meson
 
 COPY setup-toolchain.sh /tmp/setup-toolchain.sh
 RUN /tmp/setup-toolchain.sh
-
-# TODO: Send a PR to Sighery's fork and remove this part.
-COPY patch-toolchain.sh /tmp/patch-toolchain.sh
-RUN /tmp/patch-toolchain.sh
