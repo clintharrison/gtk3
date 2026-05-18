@@ -13,11 +13,14 @@ introspection = false
 
 [cairo:project options]
 xcb = 'disabled'
+tests = 'disabled'
  
 [freetype2:project options]
 brotli = 'disabled'
+bzip2 = 'disabled'
 
 [gdk-pixbuf:project options]
+gio_sniffing = false
 glycin = 'disabled'
 man = false
 tiff = 'disabled'
@@ -35,6 +38,7 @@ introspection = 'disabled'
 utilities = 'disabled'
 docs = 'disabled'
 tests = 'disabled'
+cairo = 'disabled'
 
 [libepoxy:project options]
 egl = 'no'
