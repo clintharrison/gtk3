@@ -3,7 +3,7 @@ directory = cairo
 url = https://gitlab.freedesktop.org/cairo/cairo.git
 push-url = ssh://git@gitlab.freedesktop.org:cairo/cairo.git
 revision = ab5b9ba7095e149040f88a7ca735e5959fe29fa3
-diff_files = cairo.diff
+diff_files = cairo.patch
 
 [provide]
 cairo = libcairo_dep
