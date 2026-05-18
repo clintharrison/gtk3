@@ -1,0 +1,7 @@
+// https://aka.ms/devcontainer.json
+{
+	"name": "libgtk-3 build for kindlehf",
+	"build": {
+		"dockerfile": "Dockerfile"
+	}
+}
