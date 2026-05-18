@@ -1,0 +1,13 @@
+diff --git a/src/arm/ffi.c b/src/arm/ffi.c
+index 1234567..abcdefg 100644
+--- a/src/arm/ffi.c
++++ b/src/arm/ffi.c
+@@ -653,8 +653,8 @@ ffi_prep_closure_loc (ffi_closure * closure,
+ # elif defined(_WIN32)
+   FlushInstructionCache(GetCurrentProcess(), closure->tramp, FFI_TRAMPOLINE_SIZE);
+ # else
+-  __clear_cache(closure->tramp, closure->tramp + 8);  /* clear data map */
+-  __clear_cache(codeloc, codeloc + 8);                        /* clear insn map */
++  __builtin___clear_cache(closure->tramp, closure->tramp + 8);        /* clear data map */
++  __builtin___clear_cache(codeloc, codeloc + 8);                      /* clear insn map */
+ # endif
