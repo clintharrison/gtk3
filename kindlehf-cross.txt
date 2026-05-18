@@ -1,0 +1,56 @@
+[built-in options]
+force_fallback_for = ['libpcre2-8', 'libffi', 'fontconfig', 'pixman', 'glib', 'cairo', 'expat', 'gdk-pixbuf', 'freetype2', 'pango', 'harfbuzz', 'atk']
+ 
+[project options]
+wayland_backend = false
+introspection = false
+demos = false
+examples = false
+tests = false
+
+[atk:project options]
+introspection = false
+
+[cairo:project options]
+xcb = 'disabled'
+tests = 'disabled'
+ 
+[freetype2:project options]
+brotli = 'disabled'
+bzip2 = 'disabled'
+harfbuzz = 'disabled'
+
+[gdk-pixbuf:project options]
+gio_sniffing = false
+glycin = 'disabled'
+man = false
+tiff = 'disabled'
+
+[gobject-introspection:project options]
+gi_cross_use_prebuilt_gi = true
+
+[glib:project options]
+sysprof = 'disabled'
+libmount = 'disabled'
+tests = false
+
+[harfbuzz:project options]
+introspection = 'disabled'
+utilities = 'disabled'
+docs = 'disabled'
+tests = 'disabled'
+cairo = 'disabled'
+
+[libepoxy:project options]
+egl = 'no'
+tests = false
+
+[libffi:project options]
+tests = false
+
+[pango:project options]
+libthai = 'disabled'
+build-testsuite = false
+
+[pcre2-10.46:project options]
+test = 'disabled'

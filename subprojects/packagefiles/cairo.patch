@@ -1,0 +1,14 @@
+diff --git a/src/cairo-xlib-surface.c b/src/cairo-xlib-surface.c
+index fac2911..94cd403 100644
+--- a/src/cairo-xlib-surface.c
++++ b/src/cairo-xlib-surface.c
+@@ -264,6 +264,9 @@ _xrender_format_to_content (XRenderPictFormat *xrender_format)
+ 	xrender_format->direct.blueMask)
+ 	    content |= CAIRO_CONTENT_COLOR;
+ 
++    if (content == 0)
++	    content = CAIRO_CONTENT_COLOR;
++
+     return content;
+ }
+ 

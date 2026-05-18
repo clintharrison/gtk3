@@ -1,0 +1,15 @@
+diff --git a/meson.build b/meson.build
+index 7b8bf1c..f773b0e 100644
+--- a/meson.build
++++ b/meson.build
+@@ -228,7 +228,9 @@ configure_file(
+ )
+ 
+ # python headers
+-cc.check_header('Python.h', dependencies: [python.dependency()], required: true)
++if not get_option('gi_cross_use_prebuilt_gi')
++  cc.check_header('Python.h', dependencies: [python.dependency()], required: true)
++endif
+ 
+ # cairo
+ cairo_option = get_option('cairo')

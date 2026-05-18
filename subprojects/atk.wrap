@@ -2,4 +2,4 @@
 directory=atk
 url=https://gitlab.gnome.org/GNOME/atk.git
 push-url=git@gitlab.gnome.org:GNOME/atk.git
-revision=master
+revision = de18aade7ab51170fa4debb1ca77ebeded849152

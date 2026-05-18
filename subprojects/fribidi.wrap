@@ -2,4 +2,4 @@
 directory=fribidi
 url=https://github.com/fribidi/fribidi.git
 push-url=git@github.com:fribidi/fribidi.git
-revision=master
+revision = 5c85a174650ab8ef106ce85f13bcf2950d3fc65f

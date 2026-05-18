@@ -372,7 +372,7 @@ gmodule_dep    = dependency('gmodule-2.0', version: glib_req,
 
 # Update when we can find depedencies in a declarative manner
 cairo_dep      = dependency('cairo', version: cairo_req, required: cc.get_id() != 'msvc')
-cairogobj_dep  = dependency('cairo-gobject', version: cairo_req, required: cc.get_id() != 'msvc')
+cairogobj_dep  = dependency('cairo-gobject', version: cairo_req, required: false)
 
 # Remove when we can find depedencies in a declarative manner
 if not cairo_dep.found() and cc.get_id() == 'msvc'
@@ -387,14 +387,14 @@ if not cairo_dep.found()
 endif
 
 # Remove when we can find depedencies in a declarative manner
-if not cairogobj_dep.found() and cc.get_id() == 'msvc'
+if not cairogobj_dep.found()
   if cc.has_header('cairo-gobject.h')
     cairogobj_dep = cc.find_library('cairo-gobject', required: false)
   endif
 endif
 
 if not cairogobj_dep.found()
-  cairogobj_dep  = dependency('cairo-gobject', version: cairo_req,
+  cairogobj_dep  = dependency('cairo-gobject', version: cairo_req, required: false,
                               fallback : ['cairo', 'libcairogobject_dep'])
 endif
 
@@ -565,7 +565,7 @@ if x11_enabled
   xfixes_dep     = dependency('xfixes', required: false)
   xcomposite_dep = dependency('xcomposite', required: false)
   fontconfig_dep = dependency('fontconfig', fallback: ['fontconfig', 'fontconfig_dep'])
-  atkbridge_dep  = dependency('atk-bridge-2.0', version: at_spi2_atk_req)
+  atkbridge_dep  = dependency('atk-bridge-2.0', version: at_spi2_atk_req, required: false)
 
   backend_immodules += ['xim']
 
@@ -584,7 +584,9 @@ if x11_enabled
     x11_pkgs += ['xdamage']
   endif
 
-  atk_pkgs += ['atk-bridge-2.0']
+  if atkbridge_dep.found()
+    atk_pkgs += ['atk-bridge-2.0']
+  endif
 
   cdata.set('HAVE_XDAMAGE', xdamage_dep.found() ? 1 : false)
   cdata.set('HAVE_XCURSOR', xcursor_dep.found() ? 1 : false)
