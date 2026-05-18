@@ -1,5 +1,5 @@
 [built-in options]
-force_fallback_for = ['libpcre2-8', 'libffi', 'fontconfig', 'pixman']
+force_fallback_for = ['libpcre2-8', 'libffi', 'fontconfig', 'pixman', 'glib', 'cairo', 'expat', 'gdk-pixbuf', 'freetype2', 'pango', 'harfbuzz', 'atk']
  
 [project options]
 wayland_backend = false
@@ -18,6 +18,7 @@ tests = 'disabled'
 [freetype2:project options]
 brotli = 'disabled'
 bzip2 = 'disabled'
+harfbuzz = 'disabled'
 
 [gdk-pixbuf:project options]
 gio_sniffing = false
@@ -48,8 +49,8 @@ tests = false
 tests = false
 
 [pango:project options]
-introspection = 'disabled'
 libthai = 'disabled'
+build-testsuite = false
 
 [pcre2-10.46:project options]
 test = 'disabled'
